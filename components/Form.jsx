@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const popularTags = [
   'product',
-  'webdevelopment',
+  'web-development',
   'idea',
   'art'
 ];
