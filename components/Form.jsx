@@ -1,5 +1,12 @@
 import Link from "next/link";
 
+const popularTags = [
+  'product',
+  'webdevelopment',
+  'idea',
+  'art'
+];
+
 const Form = ({
   type,
   post,
@@ -31,7 +38,18 @@ const Form = ({
         </label>
         <label>
           <span className="font-satoshi font-semibold text-base text-gray-700">
-            Tag <span className="font-normal text-gray-500 text-sm">(e.g. #product, #webdevelopment, #idea)</span>
+            Tag {` `}
+            <span className="font-normal text-gray-500 text-sm">
+              (e.g. {popularTags.map((tag) => (
+                <span 
+                  key={tag} 
+                  className="prompt_tag" 
+                  onClick={(e) => setPost({ ...post, tag: e.target.innerText })}
+                >
+                  {`#${tag}`}
+                </span>
+              ))})
+            </span>
           </span>
           <input
             value={post.tag}

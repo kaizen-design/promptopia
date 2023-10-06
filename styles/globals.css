@@ -168,3 +168,12 @@
 .flex-between {
   @apply flex justify-between items-center;
 }
+
+.prompt_tag:not(:last-child):after {
+  content: ', ';
+  @apply text-gray-500;
+}
+
+.prompt_tag {
+  @apply hover:text-black cursor-pointer;
+}
