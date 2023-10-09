@@ -14,6 +14,6 @@ const Home = () => {
       <Feed />
     </section>
   )
-}
+};
 
-export default Home
+export default Home;
